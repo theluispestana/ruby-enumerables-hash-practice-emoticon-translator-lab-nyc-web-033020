@@ -17,7 +17,7 @@ def create_hash(library, language)
   if language == 'english'
     library.each_value { |(english, japanese)| hash[english] = "#{japanese}" }
   else
-    library.each_value { |(english, japanese)| hash[japanese] = "#{english}" }
+    library.each_pair { |key, (english, japanese)| hash[japanese] = "#{key}" }
   end
   hash
 end
