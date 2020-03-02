@@ -22,10 +22,22 @@ def create_hash(library, language)
   hash
 end
 
-def get_japanese_emoticon
+def get_japanese_emoticon(file_path, emoticon)
   # code goes here
+  hash = load_library(file_path)
+  if hash['get_emoticon'][emoticon]
+    return hash['get_emoticon'][emoticon]
+  else
+    return 'Very sorry, that emoticon could not be found'
+  end
 end
 
-def get_english_meaning
+def get_english_meaning(file_path, emoticon)
   # code goes here
+ hash = load_library(file_path)
+  if hash['get_meaning'][emoticon]
+    return hash['get_meaning'][emoticon]
+  else
+    return 'Very sorry, that emoticon could not be found'
+  end
 end
