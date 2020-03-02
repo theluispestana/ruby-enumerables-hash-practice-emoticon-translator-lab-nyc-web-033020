@@ -9,7 +9,7 @@ def load_library(file_path)
     'get_meaning' => create_hash(library, 'japanese'),
     'get_emoticon' => create_hash(library, 'english')
   }
-  pp hash
+  hash
 end
 
 def create_hash(library, language)
